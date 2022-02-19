@@ -1,0 +1,11 @@
+<div class="container">
+    <div *ngFor="let content of contents ; let i=index" class="row border shadow m-5">
+        <div class="col-9 m-auto ps-5">
+            <h3>{{head}}</h3>
+            <p>{{paragraph}}</p>
+        </div>
+        <div class="col-3">
+            <img [src]="useAvater" style="height: 200px; width:320px ;" alt="">
+        </div>
+    </div>
+</div>

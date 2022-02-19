@@ -10,7 +10,11 @@ import { SectionTwoComponent } from './Day 1/section-two/section-two.component';
 import { AboutComponent } from './Day 1/about/about.component';
 import { FooterComponent } from './Day 1/footer/footer.component';
 import { SkillslistComponent } from './Day 1/skillslist/skillslist.component';
-import { Lab2Component } from './Day 2/lab2/lab2.component';
+import { CarouselComponent } from './Day 2/carousel/carousel.component';
+import { ContentComponent } from './Day 2/content/content.component';
+import { NavbarComponent } from './Day 2/navbar/navbar.component';
+import { Header2Component } from './Day 2/header2/header2.component';
+import { Footer2Component } from './Day 2/footer2/footer2.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { Lab2Component } from './Day 2/lab2/lab2.component';
     AboutComponent,
     FooterComponent,
     SkillslistComponent,
-    Lab2Component
+    CarouselComponent,
+    ContentComponent,
+    NavbarComponent,
+    Header2Component,
+    Footer2Component
   ],
   imports: [
     BrowserModule,
