@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section-two.component.css']
 })
 export class SectionTwoComponent implements OnInit {
+  head : string = "Portfolio"
   titles :string[]=[ "WEb Design","Mobile Design","Logo Design","Web Application Development","Mobile Application Development","PWA Development" ]
   constructor() { }
 

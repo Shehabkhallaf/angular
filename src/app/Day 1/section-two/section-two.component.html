@@ -1,5 +1,5 @@
 <div class="container-fluid p-2 my-4">
-    <h1 class="m-5">Portfolio</h1>
+    <h1 class="m-5">{{head}}</h1>
     <div class="row mx-5 d-flex justify-content-center">
       <div *ngFor="let title of titles ; let i=index" class="col-3 m-3 d-flex align-items-center border justify-content-center underline text-light text-center "
         style="height: 200px; position: relative;"[ngClass]="{'bg-secondary':i%2===0,'bg-warning':i%2 !==0}">
