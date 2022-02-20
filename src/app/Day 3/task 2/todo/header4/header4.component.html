@@ -1,0 +1,10 @@
+<div class="container-fluid bg-primary">
+    <div class="p-5" style="height:40vh ;border: 2px solid yellow;">
+        <h1>To-Do App!</h1>
+        <p>Add New Todo</p>
+        <input class="form-control" style="margin-bottom: 20px;" type="text" #box />
+        <button (click)="getVal(box.value)" style="background-color: transparent;color: black;text-decoration: none;border: 1px solid black;padding: 5px 10px;" href="">Add</button>
+        <h3>{{currentVal}}</h3>
+    </div>
+</div>
+
