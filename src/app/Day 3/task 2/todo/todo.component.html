@@ -1,6 +1,6 @@
-<div style="background-color: rgb(2, 2, 41);height: 100vh;">
+<div style="background-color: rgb(2, 2, 41);height: 100vh; color: black;">
     <div class="container" style="border: 2px solid red;">
-        <app-header4 (event)="getVal($event)"></app-header4>
-        <app-body4 (childEvent)="val=$event"></app-body4>
+        <app-header4 (messageEvent)="receiveMessage($event)"></app-header4>
+        <app-body4 [dataFromParent]="dataFromchild"></app-body4>
     </div>
 </div>

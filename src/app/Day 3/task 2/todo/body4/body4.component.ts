@@ -6,7 +6,7 @@ import { Component, OnInit, Output, Input ,EventEmitter  } from '@angular/core';
   styleUrls: ['./body4.component.css']
 })
 export class Body4Component implements OnInit {
- @Input() public dataFromParent;
+ @Input() public dataFromParent : any;
   constructor() { }
 
   ngOnInit(): void {

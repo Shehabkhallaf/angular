@@ -6,10 +6,9 @@ import { Component, OnInit, Input, Output ,EventEmitter } from '@angular/core';
   styleUrls: ['./header4.component.css']
 })
 export class Header4Component implements OnInit {
-  title = 'blog'
-  public currentVal =[];
-  @Output() public childEvent = new EventEmitter();
-  constructor() { }
+
+  @Output() messageEvent = new EventEmitter();
+    constructor() { }
 
   // @Output() event = new EventEmitter<string>();
 
@@ -18,8 +17,7 @@ export class Header4Component implements OnInit {
   }
   
 
-  getVal(val:any){
-    this.currentVal = val
-    this.childEvent.emit(val)
+  getVal(value:string){
+    this.messageEvent.emit(value)
   }
 }
