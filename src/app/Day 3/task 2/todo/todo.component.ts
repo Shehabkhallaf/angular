@@ -7,13 +7,14 @@ import { Body4Component } from './body4/body4.component';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-  dataFromchild: string[] = [];
+  dataFromchild: Object[] = [];
   constructor() {   }
 
   ngOnInit(): void {
   }
   receiveMessage(newData: string) {
-    this.dataFromchild.push(newData)
+    let item = {name:newData , marked : false}
+    this.dataFromchild.push(item)
     console.log(this.dataFromchild)
   }
 

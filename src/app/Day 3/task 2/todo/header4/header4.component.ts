@@ -10,8 +10,6 @@ export class Header4Component implements OnInit {
   @Output() messageEvent = new EventEmitter();
     constructor() { }
 
-  // @Output() event = new EventEmitter<string>();
-
   ngOnInit(): void {
 
   }

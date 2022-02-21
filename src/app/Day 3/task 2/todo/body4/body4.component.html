@@ -1,8 +1,16 @@
 <div class="container-fluid bg-white">
-        <div class="container pt-3" style="height:59vh ;border: 2px solid yellow;">
-            <div class="text-center">
-                <h2>Let's get some work done!</h2>
-                <h3>{{dataFromParent}}</h3>
+    <div class="container pt-3" style="height:59vh ;border: 2px solid yellow;">
+        <div class="text-center">
+            <h2>Let's get some work done!</h2>
+            <div *ngFor="let data of dataFromParent ,let i= index" class="mt-2 d-flex justify-content-between">
+                <h3 class="text-start" [class.text-decoration-line-through]="data.marked === true">{{data.name}}
+                </h3>
+                <div>
+                    <button class="btn btn-danger" (click)="deleteItem(i)">Delete</button>
+                    <button class="btn btn-primary ms-2" (click)="markItem(i)">Mark as completed</button>
+                </div>
             </div>
+
         </div>
+    </div>
 </div>
