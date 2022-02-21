@@ -1,0 +1,62 @@
+<div class="container">
+    <form [formGroup]="registerForm" (ngSubmit)="submitregisterForm()">
+        <div class="mb-3">
+            <label for="email-addres" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email-addres" aria-describedby="email-addres" formControlName="emailaddress" />
+            <div class="text-danger" *ngIf="registerForm.controls['emailaddress'].touched && !registerForm.controls['emailaddress'].valid">
+                <small *ngIf="registerForm.controls['emailaddress'].errors?.['pattern']">
+                    this field is required
+                </small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="full-name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="full-name" aria-describedby="full-name" formControlName="fullname" />
+            <div class="text-danger" *ngIf="registerForm.controls['fullname'].touched && !registerForm.controls['fullname'].valid">
+                <small *ngIf="registerForm.controls['fullname'].errors?.['required']">
+                    this field is required
+                </small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="user-name" class="form-label">Username</label>
+            <input type="text" class="form-control" id="user-name" aria-describedby="user-name" formControlName="username" />
+            <div class="text-danger" *ngIf="registerForm.controls['username'].touched && !registerForm.controls['username'].valid">
+                <small *ngIf="registerForm.controls['username'].errors?.['required']">
+                    this field is required
+                </small>
+                <small *ngIf="registerForm.controls['username'].errors?.['pattern']">
+                    Username shouldn't have space
+                </small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="user-password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="user-password" aria-describedby="user-password" formControlName="userpassword"/>
+            <div class="text-danger" *ngIf="registerForm.controls['userpassword'].touched && !registerForm.controls['userpassword'].valid">
+                <small *ngIf="registerForm.controls['userpassword'].hasError('pattern')">
+                    this field is required and password length not less 
+                    than 8 characters , contains at least one 
+                    lowercase , one uppercase , at least one digit 
+                    and special character
+                </small>
+                <small *ngIf="registerForm.controls['userpassword'].errors?.['minlength']">
+                    Min length is 8 character
+                </small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="user-password" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="Confirm-Password" aria-describedby="Confirm-Password" formControlName="ConfirmPassword"/>
+            <div class="text-danger" *ngIf="registerForm.controls['ConfirmPassword'].touched && !registerForm.controls['ConfirmPassword'].valid">
+                <small *ngIf="registerForm.controls['ConfirmPassword'].errors?.['pattern']">
+                    this field is required
+                </small>
+                <small *ngIf="registerForm.controls['ConfirmPassword'].errors?.['minlength']">
+                    Min length is 8 character
+                </small>
+            </div>
+        </div>
+        <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary">Submit</button>
+    </form>
+</div>

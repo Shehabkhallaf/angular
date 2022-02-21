@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +27,8 @@ import { Body4Component } from '../app/Day 3/task 2/todo/body4/body4.component';
 import { TodoComponent } from '../app/Day 3/task 2/todo/todo.component';
 import { PipeDataPipe } from './Day 3/task 2/pipe-data.pipe';
 import { SharedComponent } from './shared/shared/shared.component';
+import { LoginComponent } from './Day 4/login/login.component';
+import { RegisterComponent } from './Day 4/register/register.component';
 
 @NgModule({
   declarations: [
@@ -48,13 +52,16 @@ import { SharedComponent } from './shared/shared/shared.component';
     Body4Component,
     TodoComponent,
     PipeDataPipe,
-    SharedComponent
+    SharedComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

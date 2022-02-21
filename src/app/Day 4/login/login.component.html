@@ -1,0 +1,47 @@
+<div class="container my-5">
+    <form #loginForm="ngForm"  (ngSubmit)="submitloginForm(loginForm)">
+        <div class="mb-3">
+          <label for="userEmail" class="form-label">email</label>
+          <input
+            type="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            class="form-control"
+            id="userEmail"
+            aria-describedby="userEmail"
+            required
+            ngModel
+            name="email"
+            #email="ngModel"
+          />
+          <small class="text-danger" *ngIf="email.touched && !email.valid">
+            <div *ngIf="email.errors?.['required']">
+              this field is required
+            </div>
+          </small>
+        </div>
+        <div class="mb-3">
+          <label for="user-password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="user-password"
+            aria-describedby="user-password"
+            required
+            minlength="10"
+            maxlength="200"
+            ngModel
+            name="password"
+            #password="ngModel"
+          />
+          <div class="text-danger" *ngIf="password.touched && !password.valid">
+            <small *ngIf="password.hasError('required')">
+              this field is required
+            </small>
+          </div>
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Submit</button>
+      </form>
+      <h4 class="text-center my-5">Don't have account ? <a href="">Register</a></h4>
+</div>
+
+  
