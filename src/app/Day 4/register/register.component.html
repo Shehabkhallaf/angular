@@ -35,7 +35,7 @@
         </div>
         <div class="mb-3">
             <label for="user-password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="user-password" aria-describedby="user-password" formControlName="userpassword"/>
+            <input #pass type="password" class="form-control" id="user-password" aria-describedby="user-password" formControlName="userpassword"/>
             <div class="text-danger" *ngIf="registerForm.controls['userpassword'].touched && !registerForm.controls['userpassword'].valid">
                 <small *ngIf="registerForm.controls['userpassword'].errors?.['pattern']">
                     this field is required and password length not less than 8 characters , contains at least one lowercase , one uppercase , at least one digit 
@@ -48,13 +48,13 @@
         </div>
         <div class="mb-3">
             <label for="Confirm-password" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="Confirm-Password" aria-describedby="Confirm-Password" formControlName="ConfirmPassword"/>
+            <input #con type="password" class="form-control" id="Confirm-Password" aria-describedby="Confirm-Password" formControlName="ConfirmPassword"/>
             <div class="text-danger" *ngIf="registerForm.controls['ConfirmPassword'].touched && !registerForm.controls['ConfirmPassword'].valid">
                 <small *ngIf="registerForm.controls['ConfirmPassword'].errors?.['notEquivalent']">
                     Password not match
                 </small>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" [disabled]="registerForm.invalid && pass.value===con.value"  class="btn btn-primary">Submit</button>
     </form>
 </div>

@@ -15,8 +15,8 @@ export class RegisterComponent implements OnInit {
       fullname : new FormControl ('',Validators.required),
       username: new FormControl ('',[Validators.required,Validators.pattern("^[^\r\n\t\f\v ]*$")]),
       userpassword: new FormControl ('',[Validators.required,Validators.minLength(8),Validators.pattern("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")]),
-      ConfirmPassword: ['', {
-        Validators: [
+      ConfirmPassword:  ['', {
+        Validators: ['' ,
           Validators.required,
           this.checkIfMatchingPasswords('userpassword', 'ConfirmPassword')
         ]
@@ -46,5 +46,4 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
-
 }
