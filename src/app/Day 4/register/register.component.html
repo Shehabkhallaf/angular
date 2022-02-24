@@ -50,7 +50,7 @@
             <label for="Confirm-password" class="form-label">Confirm Password</label>
             <input #con type="password" class="form-control" id="Confirm-Password" aria-describedby="Confirm-Password" formControlName="ConfirmPassword"/>
             <div class="text-danger" *ngIf="registerForm.controls['ConfirmPassword'].touched && !registerForm.controls['ConfirmPassword'].valid">
-                <small *ngIf="registerForm.controls['ConfirmPassword'].errors?.['notEquivalent']">
+                <small *ngIf="registerForm.controls['ConfirmPassword'].errors?.['checkIfMatchingPasswords']">
                     Password not match
                 </small>
             </div>
