@@ -29,6 +29,7 @@ import { PipeDataPipe } from './Day 3/task 2/pipe-data.pipe';
 import { SharedComponent } from './shared/shared/shared.component';
 import { LoginComponent } from './Day 4/login/login.component';
 import { RegisterComponent } from './Day 4/register/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { RegisterComponent } from './Day 4/register/register.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
