@@ -1,7 +1,7 @@
 <div class="container my-5">
     <form [formGroup]="registerForm" (ngSubmit)="submitregisterForm()">
         <div class="mb-3">
-            <label for="email-addres" class="form-label">Email</label>
+            <label for="email-addres" class="form-label mt-5">Email</label>
             <input type="email" class="form-control" id="email-addres" aria-describedby="email-addres" formControlName="emailaddress" />
             <div class="text-danger" *ngIf="registerForm.controls['emailaddress'].touched && !registerForm.controls['emailaddress'].valid">
                 <small *ngIf="registerForm.controls['emailaddress'].errors?.['required']">
