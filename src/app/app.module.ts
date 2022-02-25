@@ -30,6 +30,10 @@ import { SharedComponent } from './shared/shared/shared.component';
 import { LoginComponent } from './Day 4/login/login.component';
 import { RegisterComponent } from './Day 4/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductsListComponent } from './Day 4/products-list/products-list.component';
+import { ProductcartComponent } from './Day 4/productcart/productcart.component';
+import { NotFoundPageComponent } from './Day 4/not-found-page/not-found-page.component';
+import { ProductDetailsComponent } from './Day 4/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +59,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PipeDataPipe,
     SharedComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductsListComponent,
+    ProductcartComponent,
+    NotFoundPageComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

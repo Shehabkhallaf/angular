@@ -1,0 +1,10 @@
+<div class="card" style="width: 20rem;height: 38rem;">
+    <img [src]="productitem.image" class="card-img-top p-5" style="height:25rem ;" alt="...">
+    <div class="card-body text-center">
+        <h5 class="card-title">{{productitem.title}}</h5>
+        <p class="card-text">{{productitem.category}}</p>
+        <p class="card-text">Price : {{productitem.price | currency:'EGP '}}</p>
+        <p class="card-text" [ngStyle]="{'color' :productitem.rating.count !=0? 'green' : 'red'}">count {{productitem.rating.count}}</p>
+        <a class="btn btn-primary" (click)="navigateToBlogDetails()">View Details</a>
+    </div>
+</div>
