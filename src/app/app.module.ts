@@ -34,6 +34,8 @@ import { ProductsListComponent } from './Day 4/products-list/products-list.compo
 import { ProductcartComponent } from './Day 4/productcart/productcart.component';
 import { NotFoundPageComponent } from './Day 4/not-found-page/not-found-page.component';
 import { ProductDetailsComponent } from './Day 4/product-details/product-details.component';
+import { CartComponent } from './Day 4/cart/cart.component';
+import { CartTableComponent } from './Day 4/cart-table/cart-table.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,9 @@ import { ProductDetailsComponent } from './Day 4/product-details/product-details
     ProductsListComponent,
     ProductcartComponent,
     NotFoundPageComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent,
+    CartTableComponent
   ],
   imports: [
     BrowserModule,

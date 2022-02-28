@@ -16,5 +16,7 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  addToCart(){
+    this.counterServies.setCounterValue(++this.counter)
+  }
 }

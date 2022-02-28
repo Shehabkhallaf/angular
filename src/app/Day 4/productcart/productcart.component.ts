@@ -29,5 +29,7 @@ export class ProductcartComponent implements OnInit {
   navigateToBlogDetails(){
     this.router.navigate(['/Product-details',this.productitem.id])
   }
-
+  navigateToBlogCart(){
+    this.router.navigate(['/Products-cart',this.productitem.id])
+  }
 }

@@ -6,6 +6,8 @@ import { ProductDetailsComponent } from './Day 4/product-details/product-details
 import { ProductsListComponent } from './Day 4/products-list/products-list.component';
 import { RegisterComponent } from './Day 4/register/register.component';
 import { AuthGuardGuard } from './auth-guard.guard';
+import { CartComponent } from './Day 4/cart/cart.component';
+import { CartTableComponent } from './Day 4/cart-table/cart-table.component';
 
 
 const routes: Routes = [
@@ -15,10 +17,11 @@ const routes: Routes = [
     path: 'Product-details/:id', component: ProductDetailsComponent,
     canActivate :[AuthGuardGuard],
   },
+  { path: 'Products-cart', component: CartComponent },
+  { path: 'Product-table', component: CartTableComponent },
   { path: 'Products-list', component: ProductsListComponent },
   { path: '**', component: NotFoundPageComponent },
-
-
+  
 ];
 
 @NgModule({
