@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import productslist from '../../../assets/data.json'
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartCounterService } from '../services/cart-counter.service';
 
 @Component({
   selector: 'app-product-details',
@@ -9,14 +10,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductDetailsComponent implements OnInit {
   productDetails : any ;
-  constructor(private activatedRoute : ActivatedRoute) { 
+  cart = 0 ;
+  constructor(private activatedRoute : ActivatedRoute ,private CartCouterServies : CartCounterService) { 
     const activatedId = this.activatedRoute.snapshot.params['id']
     this.productDetails = productslist.find(product => product.id == activatedId)
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
+      this.CartCouterServies.getcartCounterValue().subscribe(val => this.cart = val)
   }
   addToCart(){
-    this.counterServies.setCounterValue(++this.counter)
+    this.CartCouterServies.setcartCounterValue(++this.cart)
   }
 }

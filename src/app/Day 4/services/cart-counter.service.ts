@@ -5,13 +5,13 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class CartCounterService {
-  private addCart = new BehaviorSubject(0)
+  private cart = new BehaviorSubject(0)
   constructor() { }
 
-  getCartValue(){
-    return this.addCart;
+  getcartCounterValue(){
+    return this.cart;
   }
-  setCartValue(newCartCouterValue : number){
-    return this.addCart.next(newCartCouterValue)
+  setcartCounterValue(newCartCouterValue : number){
+    return this.cart.next(newCartCouterValue)
   }
 }

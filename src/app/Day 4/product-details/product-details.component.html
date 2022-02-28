@@ -11,7 +11,7 @@
                     <p class="card-text">Price : {{productDetails.price | currency:'EGP '}}</p>
                     <p class="card-text" [ngStyle]="{'color' :productDetails.rating.count !=0? 'green' : 'red'}">count
                         {{productDetails.rating.count}}</p>
-                    <button class="btn btn-primary">Add To Cart</button>
+                    <button class="btn btn-primary" (click)="addToCart()">Add To Cart</button>
                 </div>
             </div>
         </div>

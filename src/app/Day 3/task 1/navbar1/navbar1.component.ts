@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterService } from 'src/app/Day 4/services/counter.service';
 import {CartCounterService} from '../../../Day 4/services/cart-counter.service'
 @Component({
   selector: 'app-navbar1',
@@ -7,10 +8,13 @@ import {CartCounterService} from '../../../Day 4/services/cart-counter.service'
 })
 export class Navbar1Component implements OnInit {
   cartCounter : any ;
-  constructor(private cartCounterService : CartCounterService) { }
+  counter : any ;
+  constructor(private cartCounterService : CartCounterService , private counterServies : CounterService) { }
 
   ngOnInit(): void {
-    this.cartCounter = this.cartCounterService.getCartValue();
+    this.cartCounter = this.cartCounterService.getcartCounterValue();
+    this.counter = this.counterServies.getCounterValue();
+
   }
 
 }
