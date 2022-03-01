@@ -1,7 +1,6 @@
-import { Component, OnInit ,Input } from '@angular/core';
-import { Product } from 'src/app/interfaces/product';
+import { Component, OnInit, Input } from '@angular/core';
 import { CartCounterService } from '../../Day 4/services/cart-counter.service';
-import productslist from '../../../assets/data.json'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-table',
@@ -9,12 +8,21 @@ import productslist from '../../../assets/data.json'
   styleUrls: ['./cart-table.component.css']
 })
 export class CartTableComponent implements OnInit {
-  products : Product[] = productslist ;
-  cartCounter = 0 ;
-  constructor(private cartCounterServies : CartCounterService) { }
+  productList : any;
+  constructor(private cartCounterServies: CartCounterService , private router: Router) { }
 
   ngOnInit(): void {
-    this.cartCounterServies.getcartCounterValue().subscribe(val => this.cartCounter = val)
+    this.cartCounterServies.getProductList().subscribe(
+      (res) => this.productList = res ,
+      (error) => {
+        console.log(error);
+      },
+      () => {
+        console.log('completed');
+      })
   }
 
+  navigateToBlogDetails() {
+    this.router.navigate(['/Product-details', this.productList.id])
+  }
 }

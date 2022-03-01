@@ -11,10 +11,8 @@ import { CounterService } from '../services/counter.service';
 })
 export class CartComponent implements OnInit {
   counter = 0;
-  productDetails : any ;
-  constructor(private counterServies: CounterService ,private activatedRoute : ActivatedRoute) {
-    const activatedId = this.activatedRoute.snapshot.params['id']
-    this.productDetails = productslist.find(product => product.id == activatedId)
+  constructor(private counterServies: CounterService ) {
+  
   }
 
   ngOnInit(): void {
@@ -26,7 +24,5 @@ export class CartComponent implements OnInit {
   decresaseCounter() {
     this.counterServies.setCounterValue(--this.counter)
   }
-  addToCart(){
-    this.counterServies.setCounterValue(++this.counter)
-  }
+
 }

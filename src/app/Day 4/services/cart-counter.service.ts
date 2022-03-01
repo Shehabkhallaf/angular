@@ -1,17 +1,25 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartCounterService {
-  private cart = new BehaviorSubject(0)
-  constructor() { }
+  productList = 0;
 
-  getcartCounterValue(){
-    return this.cart;
+  constructor(private http: HttpClient, private router: Router) { }
+
+  getProductList() {
+    return this.http.get('https://fakestoreapi.com/products', {
+      params: {
+        limit: 9,
+      },
+    });
   }
-  setcartCounterValue(newCartCouterValue : number){
-    return this.cart.next(newCartCouterValue)
+
+  navigateToBlogDetails() {
+    this.router.navigate(['/Product-details', this.productList])
   }
+
 }

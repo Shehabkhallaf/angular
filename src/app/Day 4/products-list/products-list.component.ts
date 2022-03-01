@@ -14,7 +14,7 @@ export class ProductsListComponent implements OnInit {
   constructor(private cartCounterServies : CartCounterService) { }
 
   ngOnInit(): void {
-    this.cartCounterServies.getcartCounterValue().subscribe(val => this.cartCounter = val)
+    // this.cartCounterServies.getcartCounterValue().subscribe(val => this.cartCounter = val)
   }
 
   

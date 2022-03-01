@@ -12,7 +12,6 @@ export class Navbar1Component implements OnInit {
   constructor(private cartCounterService : CartCounterService , private counterServies : CounterService) { }
 
   ngOnInit(): void {
-    this.cartCounter = this.cartCounterService.getcartCounterValue();
     this.counter = this.counterServies.getCounterValue();
 
   }

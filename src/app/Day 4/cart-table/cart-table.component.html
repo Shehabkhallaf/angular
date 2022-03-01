@@ -1,19 +1,13 @@
-<div class="container my-5 pt-5">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Image</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-            </tr>
-        </thead>
-    </table>
-    <tbody>
-        <tr *ngFor="let product of products">
-            <app-productcart [productitem]="product"></app-productcart>
-        </tr>
-    </tbody>
-
+<div class="bg-light">
+    <div class="container my-5 py-5">
+        <div class="row justify-content-center">
+            <div class="col-3 text-center shadow m-4 rounded bg-white" *ngFor="let product of productList">
+                <img [src]="product.image" class="img-fluid rounded p-3" alt="..." style="width: 100%;height: 300px;">
+                <h5 class="card-title">{{product.title}}</h5>
+                <p class="card-text">{{product.description}}</p>
+                <p class="card-text">Price : {{product.price | currency:'EGP '}}</p>
+                <button class="btn btn-primary" (click)="navigateToBlogDetails()">Add To Cart</button>
+            </div>
+        </div>
+    </div>
 </div>

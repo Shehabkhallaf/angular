@@ -1,13 +1,38 @@
-
-
+<div class="container my-5">
+  <div class="row my-5 jusifty-content-between align-items-center">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Image</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+        </tr>
+      </thead>
+    </table>
+    <tbody>
+      <tr>
         <th scope="row align-items-center">1</th>
-        <td> <img [src]="productDetails.image" class="img-fluid rounded-start" alt="...">
-        </td>
-        <td>{{productDetails.title}}</td>
-        <td>Price : {{productDetails.price | currency:'EGP '}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <!-- <td> <img [src]="counter.image" class="img-fluid rounded-start" alt="...">
+    </td>
+    <td>{{counter.title}}</td>
+    <td>Price : {{counter.price | currency:'EGP '}}</td> -->
         <td class="d-flex">
           <button class="btn btn-success me-2" (click)="incresaseCounter()">Incresase</button>
           <h3>{{counter}}</h3>
           <button class="btn btn-danger ms-2" (click)="decresaseCounter()">Decresase</button>
         </td>
+      </tr>
+    </tbody>
 
+  </div>
+</div>
+
+<!-- <div class="container my-5 pt-5">
+    
+
+</div> -->
