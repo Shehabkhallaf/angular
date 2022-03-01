@@ -10,7 +10,7 @@ import { CounterService } from '../services/counter.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  counter = 0;
+  counter = 1;
   productDetails : any ;
   constructor(private counterServies: CounterService ,private activatedRoute : ActivatedRoute) {
     const activatedId = this.activatedRoute.snapshot.params['id']

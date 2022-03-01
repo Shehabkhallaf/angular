@@ -30,6 +30,6 @@ export class ProductcartComponent implements OnInit {
     this.router.navigate(['/Product-details', this.productitem.id])
   }
   navigateToCart() {
-    this.router.navigate(['/cart', this.productitem.id])
+    this.router.navigate(['/cart-table', this.productitem.id])
   }
 }

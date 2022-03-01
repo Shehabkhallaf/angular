@@ -1,1 +1,19 @@
-<p>cart-table works!</p>
+<div class="container my-5 pt-5">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+            </tr>
+        </thead>
+    </table>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <app-cart [productitem]="product"></app-cart>
+        </tr>
+    </tbody>
+
+</div>
