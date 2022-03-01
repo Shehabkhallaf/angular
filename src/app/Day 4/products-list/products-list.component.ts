@@ -16,8 +16,6 @@ export class ProductsListComponent implements OnInit {
   ngOnInit(): void {
     this.cartCounterServies.getcartCounterValue().subscribe(val => this.cartCounter = val)
   }
-  addToCart() {
-    this.cartCounterServies.setcartCounterValue(++this.cartCounter)
-  }
+
   
 }

@@ -17,7 +17,7 @@ const routes: Routes = [
     path: 'Product-details/:id', component: ProductDetailsComponent,
     canActivate :[AuthGuardGuard],
   },
-  { path: 'Products-cart', component: CartComponent },
+  { path: 'cart', component: CartComponent },
   { path: 'Product-table', component: CartTableComponent },
   { path: 'Products-list', component: ProductsListComponent },
   { path: '**', component: NotFoundPageComponent },

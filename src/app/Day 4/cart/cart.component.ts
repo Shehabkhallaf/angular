@@ -11,8 +11,10 @@ import { CounterService } from '../services/counter.service';
 })
 export class CartComponent implements OnInit {
   counter = 0;
-  constructor(private counterServies: CounterService) {
-
+  productDetails : any ;
+  constructor(private counterServies: CounterService ,private activatedRoute : ActivatedRoute) {
+    const activatedId = this.activatedRoute.snapshot.params['id']
+    this.productDetails = productslist.find(product => product.id == activatedId)
   }
 
   ngOnInit(): void {

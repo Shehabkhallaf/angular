@@ -12,9 +12,10 @@
     <tbody>
       <tr>
         <th scope="row align-items-center">1</th>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td> <img [src]="productDetails.image" class="img-fluid rounded-start" alt="...">
+        </td>
+        <td>{{productDetails.title}}</td>
+        <td>Price : {{productDetails.price | currency:'EGP '}}</td>
         <td class="d-flex">
           <button class="btn btn-success me-2" (click)="incresaseCounter()">Incresase</button>
           <h3>{{counter}}</h3>

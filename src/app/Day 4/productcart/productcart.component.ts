@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./productcart.component.css']
 })
 export class ProductcartComponent implements OnInit {
-  @Input() productitem : Product ={
+  @Input() productitem: Product = {
     id: 0,
     title: "",
     price: 0,
@@ -17,19 +17,19 @@ export class ProductcartComponent implements OnInit {
     category: "",
     image: "",
     rating: {
-        rate: 0,
-        count: 0
+      rate: 0,
+      count: 0
     }
   }
-  constructor(private router : Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  navigateToBlogDetails(){
-    this.router.navigate(['/Product-details',this.productitem.id])
+  navigateToBlogDetails() {
+    this.router.navigate(['/Product-details', this.productitem.id])
   }
-  addToCart(){
-    this.router.navigate(['/Products-cart',this.productitem.id])
+  navigateToCart() {
+    this.router.navigate(['/cart', this.productitem.id])
   }
 }
