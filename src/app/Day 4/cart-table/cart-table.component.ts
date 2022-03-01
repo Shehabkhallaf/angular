@@ -1,6 +1,7 @@
 import { Component, OnInit ,Input } from '@angular/core';
 import { Product } from 'src/app/interfaces/product';
 import { CartCounterService } from '../../Day 4/services/cart-counter.service';
+import productslist from '../../../assets/data.json'
 
 @Component({
   selector: 'app-cart-table',
@@ -8,18 +9,8 @@ import { CartCounterService } from '../../Day 4/services/cart-counter.service';
   styleUrls: ['./cart-table.component.css']
 })
 export class CartTableComponent implements OnInit {
-  @Input() productitem: Product = {
-    id: 0,
-    title: "",
-    price: 0,
-    description: "",
-    category: "",
-    image: "",
-    rating: {
-      rate: 0,
-      count: 0
-    }
-  }
+  products : Product[] = productslist ;
+  cartCounter = 0 ;
   constructor(private cartCounterServies : CartCounterService) { }
 
   ngOnInit(): void {

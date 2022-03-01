@@ -10,7 +10,7 @@ import { CounterService } from '../services/counter.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  counter = 1;
+  counter = 0;
   productDetails : any ;
   constructor(private counterServies: CounterService ,private activatedRoute : ActivatedRoute) {
     const activatedId = this.activatedRoute.snapshot.params['id']
@@ -25,5 +25,8 @@ export class CartComponent implements OnInit {
   }
   decresaseCounter() {
     this.counterServies.setCounterValue(--this.counter)
+  }
+  addToCart(){
+    this.counterServies.setCounterValue(++this.counter)
   }
 }
